@@ -46,10 +46,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">わくわくアカデミー</a>
+          <a class="brand" href="/">わくわくアカデミー</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "IT共通動画", "/itcommon"  %></li>
+              <li><%= link_to "IT共通分野", "/itcommon"  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -58,25 +58,31 @@
 
     <div class="container">
         <div class="row">
-          <div class="span9">
+          <div class="span8">
             <%= bootstrap_flash %>
             <%= yield %>
           </div>
-          <div class="span3">
+          <div class="span4">
             <div class="well sidebar-nav">
               <h3>分野</h3>
               <ul class="nav nav-list">
-                <li class="nav-header">IT共通</li>
+                <li class="nav-header">IT共通分野</li>
                 <li><%= link_to "基礎理論", "/itcommon/1"  %></li>
                 <li><%= link_to "コンピュータシステム", "/itcommon/2"  %></li>
                 <li><%= link_to "技術要素", "/itcommon/3"  %></li>
+                <li><%= link_to "開発技術", "/itcommon/4"  %></li>
+                <li><%= link_to "プロジェクトマネジメント", "/itcommon/5"  %></li>
+                <li><%= link_to "サービスマネジメント", "/itcommon/6"  %></li>
+                <li><%= link_to "システム戦略", "/itcommon/7"  %></li>
+                <li><%= link_to "経営戦略", "/itcommon/8"  %></li>
+                <li><%= link_to "企業と法務", "/itcommon/9"  %></li>
               </ul>
             </div><!--/.well -->
           </div><!--/span-->
         </div><!--/row-->
 
       <footer>
-        <p>&copy; 2013 わくわくアカデミー</p>
+        <p>&copy; わくわくアカデミー 2013</p>
       </footer>
 
     </div> <!-- /container -->
