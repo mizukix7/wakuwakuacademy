@@ -1,1 +1,10 @@
-<h1><%= @large_name %></h1>
+<h2><%= @large_name %> 動画リスト</h2>
+<% if @movies.present? %>
+  <ul>
+	<% @movies.each do |movie| %>
+	  <li><a href="http://youtu.be/<%= movie.youtube_id %>"><%= movie.title %></li>
+  <% end %>
+  </ul>
+<% else %>
+<p>動画がありません。</p>
+<% end %>

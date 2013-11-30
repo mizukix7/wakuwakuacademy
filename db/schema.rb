@@ -11,11 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131130043231) do
+ActiveRecord::Schema.define(version: 20131130102758) do
 
   create_table "large_classes", force: true do |t|
     t.integer  "large_id",   null: false
     t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "movies", force: true do |t|
+    t.integer  "movie_id",   null: false
+    t.string   "title",      null: false
+    t.string   "youtube_id", null: false
+    t.integer  "large_id"
+    t.integer  "middle_id"
+    t.integer  "small_id"
+    t.integer  "item_id"
+    t.integer  "level_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
