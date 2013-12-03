@@ -3,8 +3,13 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use sqlite3 as development and mysql2 as production as the database
+group :development, :test do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'mysql2'
+end
 
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 4.0.0'
@@ -49,5 +54,7 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'execjs'
 
-# Use Google Analytics
-gem 'google-analytics-rails'
+# Use Google Analytics with production only
+group :production do
+  gem 'google-analytics-rails'
+end
