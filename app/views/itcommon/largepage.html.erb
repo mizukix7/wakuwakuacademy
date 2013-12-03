@@ -1,10 +1,18 @@
-<h2><%= @large_name %> 動画リスト</h2>
+<h2><%= @large_name %></h2>
 <% if @movies.present? %>
-  <ul>
+  <h4><span class="icon-facetime-video"></span> 動画リスト</h4>
+	<table class="table table-condensed table-hover">
+	<tr><th>No.</th><th>タイトル</th><th>リンク</th></tr>
+	<% count = 1 %>
 	<% @movies.each do |movie| %>
-	  <li><a href="http://youtu.be/<%= movie.youtube_id %>"><%= movie.title %></a></li>
+	  <tr>
+		  <td><%= count %></td>
+		  <td><a href="http://youtu.be/<%= movie.youtube_id %>"><%= movie.title %></a></td>
+			<td><a href="http://youtu.be/<%= movie.youtube_id %>" class="btn btn-info btn-xs" target="_blank"><small>YouTube</small></button></td>
+		</tr>
+		<% count = count + 1 %>
   <% end %>
-  </ul>
+  </table>
 <% else %>
 <p>動画がありません。</p>
 <% end %>

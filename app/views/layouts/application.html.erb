@@ -40,7 +40,7 @@
   </head>
   <body>
 
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
@@ -51,7 +51,7 @@
           <a class="brand" href="/">わくわくアカデミー</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "IT共通分野", "/itcommon"  %></li>
+              <li><%= link_to "IT共通", "/itcommon"  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -66,7 +66,6 @@
           </div>
           <div class="span4">
             <div class="well sidebar-nav">
-              <h3>分野</h3>
               <ul class="nav nav-list">
                 <li class="nav-header">IT共通分野</li>
                 <li><%= link_to "基礎理論", "/itcommon/1"  %></li>
@@ -84,7 +83,7 @@
         </div><!--/row-->
 
       <footer>
-        <p>&copy; わくわくアカデミー 2013</p>
+        <p>&copy; わくわくアカデミー 2013  produced by <%= link_to "わくわくスタディワールド", "http://www.wakuwakustudyworld.co.jp" %></p>
       </footer>
 
     </div> <!-- /container -->
