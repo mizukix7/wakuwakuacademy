@@ -2,7 +2,7 @@
 <% if @movies.present? %>
   <ul>
 	<% @movies.each do |movie| %>
-	  <li><a href="http://youtu.be/<%= movie.youtube_id %>"><%= movie.title %></li>
+	  <li><a href="http://youtu.be/<%= movie.youtube_id %>"><%= movie.title %></a></li>
   <% end %>
   </ul>
 <% else %>
