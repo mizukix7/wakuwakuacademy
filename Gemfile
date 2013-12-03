@@ -48,3 +48,6 @@ end
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'execjs'
+
+# Use Google Analytics
+gem 'google-analytics-rails'
