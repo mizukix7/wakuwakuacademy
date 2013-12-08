@@ -1,1 +1,17 @@
-<h1>IT共通分野</h1>
+<h2>IT共通分野</h2>
+<% if @movies.present? %>
+  <h4><span class="icon-facetime-video"></span> 新着動画リスト</h4>
+	<table class="table table-condensed table-hover">
+	<tr><th>No.</th><th>タイトル</th></tr>
+	<% count = 1 %>
+	<% @movies.each do |movie| %>
+	  <tr>
+		  <td><%= count %></td>
+		  <td><a href="http://youtu.be/<%= movie.youtube_id %>"><%= movie.title %></a><% if count <= 14 %> <span class="text-success icon-star"> new!</span><% end %></td>
+		</tr>
+		<% count = count + 1 %>
+  <% end %>
+  </table>
+<% else %>
+<p>動画がありません。</p>
+<% end %>
